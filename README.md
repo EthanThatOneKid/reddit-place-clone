@@ -1,17 +1,23 @@
 # reddit-place-clone 🗺
 
-> Clone of Reddit's r/place
+> Clone of Reddit's [r/place][place]
 
-## Media
+## About
 
-- [How `r/place` was built][how_rplace_was_built]
+Welcome to this episode of [Codecasts][codecasts]!
 
-## Alternatives
+This project is a Deno experiment.
 
-- Check out [PixelAnarchy.online][pixelanarchy]!
+## Reference
+
+- [How `r/place` was built](https://redditblog.com/2017/04/13/how-we-built-rplace/).
+- Check out [PixelAnarchy.online](https://pixelanarchy.online/)!
+- [`deno-canvas`](https://github.com/DjDeveloperr/deno-canvas) library.
 
 ---
 
+Placed with 💖 by [EthanThatOneKid][author_url]
+
 [place]: https://www.reddit.com/r/place
-[how_rplace_was_built]: https://redditblog.com/2017/04/13/how-we-built-rplace/
-[pixelanarchy]: https://pixelanarchy.online/
+[author_url]: https://github.com/EthanThatOneKid/
+[codecasts]: https://github.com/EthanThatOneKid/codecasts
