@@ -1,4 +1,4 @@
-# reddit-place-clone 🗺
+# Reddit Place Clone 🗺
 
 > Clone of Reddit's [r/place][place]
 
@@ -6,7 +6,7 @@
 
 Welcome to this episode of [Codecasts][codecasts]!
 
-This project is a Deno experiment.
+This project is a [*Deno*][deno] experiment.
 
 ## Reference
 
@@ -21,3 +21,4 @@ Placed with 💖 by [EthanThatOneKid][author_url]
 [place]: https://www.reddit.com/r/place
 [author_url]: https://github.com/EthanThatOneKid/
 [codecasts]: https://github.com/EthanThatOneKid/codecasts
+[deno]: https://deno.land/
