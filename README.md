@@ -8,6 +8,8 @@ Welcome to this episode of [Codecasts][codecasts]!
 
 This project is a [*Deno*][deno] experiment.
 
+> 💡 Check out the [Reddit post](https://www.reddit.com/r/Deno/comments/kqtlz1/simple_rplace_clone_in_deno/?utm_source=share&utm_medium=web2x&context=3)
+
 ## Reference
 
 - [How `r/place` was built](https://redditblog.com/2017/04/13/how-we-built-rplace/).
