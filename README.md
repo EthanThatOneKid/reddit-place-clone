@@ -4,7 +4,7 @@
 
 ## About
 
-Welcome to this episode of [Codecasts][codecasts]!
+<!-- Welcome to this episode of [Codecasts][codecasts]! -->
 
 This project is a [*Deno*][deno] experiment.
 
