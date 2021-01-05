@@ -31,4 +31,5 @@ Placed with 💖 by [EthanThatOneKid][author_url]
 [codecasts]: https://github.com/EthanThatOneKid/codecasts
 [deno]: https://deno.land/
 [deno_install]: https://github.com/denoland/deno_install#install-latest-version
-[heroku_badge]:https://heroku-badge.herokuapp.com/?app=reddit-place-clone
+[heroku_badge]: https://heroku-badge.herokuapp.com/?app=reddit-place-clone
+[heroku_app]: https://reddit-place-clone.herokuapp.com/
