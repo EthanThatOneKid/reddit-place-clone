@@ -1,0 +1,1 @@
+web: deno run --allow-net --allow-run --allow-read dev.ts
