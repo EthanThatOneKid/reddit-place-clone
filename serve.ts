@@ -30,10 +30,10 @@ const template = (
   <label>Message: <input type="text" /></label>
   <div>${
     submissions.map(({ color, msg, ts }) =>
-      `<p style="border: 5px solid ${color}; width: min-content">
-        ${
-        escapeHtml(msg.toLowerCase().replace(/\+/g, " "))
-      }<br><small>${new Date(ts)}
+      `<p style="border: 5px solid ${color}; width: max-content">
+        ${escapeHtml(msg.toLowerCase().replace(/\+/g, " "))}
+        <br>
+        <small>${new Date(ts)}</small>
       </p>`
     ).join("</div><div>")
   }</div>
