@@ -2,10 +2,11 @@ import { Canvas, escapeHtml, serve as createServer } from "./deps.ts";
 import type { CanvasRenderingContext2D } from "./deps.ts";
 
 const template = (
-  { canvasData, bundle, submissions }: {
+  { canvasData, bundle, submissions, totalPlacements }: {
     canvasData: string;
     bundle: string;
     submissions: PlacementRequest[];
+    totalPlacements: number;
   },
 ) =>
   `<!DOCTYPE html>
@@ -18,22 +19,23 @@ const template = (
 <body>
   <h1>Reddit Place Clone</h1>
   <p>
-    Type a message and click the canvas to add your own blot.
+    Pick your favorite color and click the canvas to add your own blot.
   </p>
   <img src="${canvasData}" />
+  <br>
+  <label>Color: <input type="color" /></label>
+  <label>Message: <input type="text" /></label>
+  <span>#${totalPlacements}</span>
   <br>
   <a href="https://github.com/EthanThatOneKid/reddit-place-clone">
     github.com/EthanThatOneKid/reddit-place-clone ✨
   </a>
-  <br>
-  <label>Color: <input type="color" /></label>
-  <label>Message: <input type="text" /></label>
   <div>${
-    submissions.map(({ color, msg, ts }) =>
+    submissions.map(({ color, msg, ts, id }) =>
       `<p style="border: 5px solid ${color}; width: max-content">
         ${escapeHtml(msg.toLowerCase().replace(/\+/g, " "))}
         <br>
-        <small>${new Date(ts)}</small>
+        <small>#${id} | ${new Date(ts)}</small>
       </p>`
     ).join("</div><div>")
   }</div>
@@ -48,6 +50,7 @@ interface PlacementRequest {
   msg: string;
   ts: number;
   ok: boolean;
+  id: number;
 }
 
 const defaultPlacementRequestValues: PlacementRequest = {
@@ -57,6 +60,7 @@ const defaultPlacementRequestValues: PlacementRequest = {
   msg: "",
   ts: -1,
   ok: false,
+  id: -1,
 };
 
 const parsePlacementRequest = (searchParams: string): PlacementRequest =>
@@ -78,6 +82,7 @@ const parsePlacementRequest = (searchParams: string): PlacementRequest =>
         result.y !== defaultPlacementRequestValues.y
       ) {
         result.ts = Date.now();
+        result.id = ++totalPlacements;
         result.ok = true;
       }
       return result;
@@ -107,6 +112,8 @@ const width = 400,
 ctx.fillStyle = "black";
 ctx.fillRect(0, 0, width, height);
 
+let totalPlacements = 0;
+
 const serve = async (): Promise<void> => {
   const bundle = await Deno.readTextFile("./client/mod.bundle.js");
   const server = createServer({ port });
@@ -127,6 +134,7 @@ const serve = async (): Promise<void> => {
     const body = template({
       bundle,
       submissions,
+      totalPlacements,
       canvasData: cnv.toDataURL(),
     });
     request.respond({ body, status: 200 });
