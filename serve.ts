@@ -108,7 +108,7 @@ ctx.fillStyle = "black";
 ctx.fillRect(0, 0, width, height);
 
 const serve = async (): Promise<void> => {
-  const bundle = await Deno.readTextFile("./assets/mod.bundle.js");
+  const bundle = await Deno.readTextFile("./client/mod.bundle.js");
   const server = createServer({ port });
   console.log(`Open http://localhost:${port}/ ✨`);
   for await (const request of server) {

@@ -4,7 +4,7 @@ const build = async (): Promise<boolean> => {
       "deno",
       "bundle",
       "client/mod.ts",
-      "assets/mod.bundle.js",
+      "client/mod.bundle.js",
       "--config",
       "client/tsconfig.json",
     ],
