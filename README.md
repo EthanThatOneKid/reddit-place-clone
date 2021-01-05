@@ -14,6 +14,12 @@ This project is a [*Deno*][deno] experiment.
 - Check out [PixelAnarchy.online](https://pixelanarchy.online/)!
 - [`deno-canvas`](https://github.com/DjDeveloperr/deno-canvas) library.
 
+## Development
+
+To spin up the development server, [install Deno][deno_install] and run the following command:
+
+`deno run --allow-net --allow-run --allow-read dev.ts`
+
 ---
 
 Placed with 💖 by [EthanThatOneKid][author_url]
@@ -22,3 +28,5 @@ Placed with 💖 by [EthanThatOneKid][author_url]
 [author_url]: https://github.com/EthanThatOneKid/
 [codecasts]: https://github.com/EthanThatOneKid/codecasts
 [deno]: https://deno.land/
+[deno_install]: https://github.com/denoland/deno_install#install-latest-version
+[denon_install]: https://github.com/denosaurs/denon#install
