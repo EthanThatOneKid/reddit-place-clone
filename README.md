@@ -1,5 +1,7 @@
 # Reddit Place Clone 🗺
 
+[![Heroku][heroku_badge]][heroku_app]
+
 > Clone of Reddit's [r/place][place]
 
 ## About
@@ -18,10 +20,6 @@ This project is a [*Deno*][deno] experiment.
 
 To spin up the development server, [install Deno][deno_install] and run the following command:
 
-`deno run --allow-net --allow-run --allow-read dev.ts`
-
-To spin up the production server, just run the following command after installing Deno.
-
 `deno run --allow-net --allow-run --allow-read --allow-env dev.ts`
 
 ---
@@ -33,4 +31,4 @@ Placed with 💖 by [EthanThatOneKid][author_url]
 [codecasts]: https://github.com/EthanThatOneKid/codecasts
 [deno]: https://deno.land/
 [deno_install]: https://github.com/denoland/deno_install#install-latest-version
-[denon_install]: https://github.com/denosaurs/denon#install
+[heroku_badge]:https://heroku-badge.herokuapp.com/?app=reddit-place-clone
