@@ -82,7 +82,7 @@ const parsePlacementRequest = (searchParams: string): PlacementRequest =>
         result.y !== defaultPlacementRequestValues.y
       ) {
         result.ts = Date.now();
-        result.id = ++totalPlacements;
+        result.id = totalPlacements;
         result.ok = true;
       }
       return result;
@@ -129,6 +129,7 @@ const serve = async (): Promise<void> => {
       }
       ctx.fillStyle = placement.color;
       ctx.fillRect(...getDrawInstructions(placement));
+      totalPlacements++;
       console.log(submissions[0]);
     }
     const body = template({
