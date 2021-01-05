@@ -20,6 +20,10 @@ To spin up the development server, [install Deno][deno_install] and run the foll
 
 `deno run --allow-net --allow-run --allow-read dev.ts`
 
+To spin up the production server, just run the following command after installing Deno.
+
+`deno run --allow-net --allow-run --allow-read --allow-env dev.ts`
+
 ---
 
 Placed with 💖 by [EthanThatOneKid][author_url]

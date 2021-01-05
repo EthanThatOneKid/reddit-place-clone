@@ -100,7 +100,7 @@ const getDrawInstructions = (
 
 const width = 400,
   height = 400,
-  port = 8080,
+  port = Deno.env.get("PORT") ? Number(Deno.env.get("PORT")) : 8080,
   cnv = Canvas.MakeCanvas(width, height),
   ctx = cnv.getContext("2d") as CanvasRenderingContext2D,
   submissions: PlacementRequest[] = [];
