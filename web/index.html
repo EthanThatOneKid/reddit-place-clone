@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Place Clone</title>
+</head>
+<body>
+  <h1>Reddit Place Clone</h1>
+  <p>
+    Pick your favorite color and click the canvas to add your own blot.
+  </p>
+  <img src="<%= it.canvasData %>" />
+  <br>
+  <label>Color: <input type="color" /></label>
+  <label>Message: <input type="text" /></label>
+  <span>#<%= it.totalSubmissions %></span>
+  <br>
+  <a href="https://github.com/EthanThatOneKid/reddit-place-clone">
+    etok.codes/reddit-place-clone ✨
+  </a>
+  <div><%= it.submissionsHTML %></div>
+  <script type="module"><%= it.js %></script>
+</body>
+</html>
