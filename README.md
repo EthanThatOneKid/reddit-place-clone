@@ -6,9 +6,10 @@
 
 <!-- Welcome to this episode of [Codecasts][codecasts]! -->
 
-This project is a [*Deno*][deno] experiment.
+This project is a [_Deno_][deno] experiment.
 
-> 💡 Check out the [Reddit post](https://www.reddit.com/r/Deno/comments/kqtlz1/simple_rplace_clone_in_deno/?utm_source=share&utm_medium=web2x&context=3)
+> 💡 Check out the
+> [Reddit post](https://www.reddit.com/r/Deno/comments/kqtlz1/simple_rplace_clone_in_deno/?utm_source=share&utm_medium=web2x&context=3)
 
 ## Reference
 
@@ -18,7 +19,8 @@ This project is a [*Deno*][deno] experiment.
 
 ## Development
 
-To spin up the development server, [install Deno][deno_install] and run the following command:
+To spin up the development server, [install Deno][deno_install] and run the
+following command:
 
 `deno run --allow-net --allow-run --allow-read --allow-env dev.ts`
 
